@@ -14,16 +14,16 @@
 <body>
     <div id="warpper" class="nav-fixed">
         <nav class="topnav shadow navbar-light bg-white d-flex">
-            <div class="navbar-brand"><a href="?">UNITOP ADMIN</a></div>
+            <div class="navbar-brand"><a href="?">Shop Online</a></div>
             <div class="nav-right ">
                 <div class="btn-group mr-auto">
                     <button type="button" class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="plus-icon fas fa-plus-circle"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="?view=add-post">Thêm bài viết</a>
-                        <a class="dropdown-item" href="?view=add-product">Thêm sản phẩm</a>
-                        <a class="dropdown-item" href="?view=list-order">Thêm đơn hàng</a>
+                        <a class="dropdown-item" href="{{url('admin/post/add')}}">Thêm bài viết</a>
+                        <a class="dropdown-item" href="{{url('admin/product/add')}}">Thêm sản phẩm</a>
+                        <a class="dropdown-item" href="{{url('admin/order/list')}}">Xem đơn hàng</a>
                     </div>
                 </div>
                 <div class="btn-group">
@@ -50,7 +50,7 @@
             <div id="sidebar" class="bg-white">
                 <ul id="sidebar-menu">
                     <li class="nav-link">
-                        <a href="?view=dashboard">
+                        <a href="{{url('dashboard')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -59,7 +59,7 @@
                         <i class="arrow fas fa-angle-right"></i>
                     </li>
                     <li class="nav-link">
-                        <a href="?view=list-post">
+                        <a href="{{url('admin/page/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -68,12 +68,12 @@
                         <i class="arrow fas fa-angle-right"></i>
 
                         <ul class="sub-menu">
-                            <li><a href="?view=add-post">Thêm mới</a></li>
-                            <li><a href="?view=list-post">Danh sách</a></li>
+                            <li><a href="{{url('admin/page/add')}}">Thêm mới</a></li>
+                            <li><a href="{{url('admin/page/list')}}">Danh sách</a></li>
                         </ul>
                     </li>
                     <li class="nav-link">
-                        <a href="?view=list-post">
+                        <a href="{{url('admin/post/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -81,13 +81,13 @@
                         </a>
                         <i class="arrow fas fa-angle-right"></i>
                         <ul class="sub-menu">
-                            <li><a href="?view=add-post">Thêm mới</a></li>
-                            <li><a href="?view=list-post">Danh sách</a></li>
-                            <li><a href="?view=cat">Danh mục</a></li>
+                            <li><a href="{{url('admin/post/add')}}">Thêm mới</a></li>
+                            <li><a href="{{url('admin/post/list')}}">Danh sách</a></li>
+                            <li><a href="{{url('admin/post/cat/add')}}">Danh mục</a></li>
                         </ul>
                     </li>
                     <li class="nav-link active">
-                        <a href="?view=list-product">
+                        <a href="{{url('admin/product/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -95,13 +95,13 @@
                         </a>
                         <i class="arrow fas fa-angle-down"></i>
                         <ul class="sub-menu">
-                            <li><a href="?view=add-product">Thêm mới</a></li>
-                            <li><a href="?view=list-product">Danh sách</a></li>
-                            <li><a href="?view=cat-product">Danh mục</a></li>
+                            <li><a href="{{url('admin/product/add')}}">Thêm mới</a></li>
+                            <li><a href="{{url('admin/product/list')}}">Danh sách</a></li>
+                            <li><a href="{{url('admin/product/cat/add')}}">Danh mục</a></li>
                         </ul>
                     </li>
                     <li class="nav-link">
-                        <a href="?view=list-order">
+                        <a href="{{url('admin/order/list')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -109,11 +109,11 @@
                         </a>
                         <i class="arrow fas fa-angle-right"></i>
                         <ul class="sub-menu">
-                            <li><a href="?view=list-order">Đơn hàng</a></li>
+                            <li><a href="{{url('admin/order/list')}}">Đơn hàng</a></li>
                         </ul>
                     </li>
                     <li class="nav-link">
-                        <a href="?view=list-user">
+                        <a href="{{url('admin/user')}}">
                             <div class="nav-link-icon d-inline-flex">
                                 <i class="far fa-folder"></i>
                             </div>
@@ -122,8 +122,8 @@
                         <i class="arrow fas fa-angle-right"></i>
 
                         <ul class="sub-menu">
-                            <li><a href="?view=add-user">Thêm mới</a></li>
-                            <li><a href="?view=list-user">Danh sách</a></li>
+                            <li><a href="{{url('admin/user/add')}}">Thêm mới</a></li>
+                            <li><a href="{{url('admin/user/list')}}">Danh sách</a></li>
                         </ul>
                     </li>
 

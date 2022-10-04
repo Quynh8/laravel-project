@@ -65,6 +65,7 @@ a:hover {
     text-transform: uppercase;
 }
 
+
 .nav-fixed .topnav {
     position: fixed;
     top: 0;
@@ -121,8 +122,10 @@ ul#sidebar-menu * {
 }
 
 .form-search {
-    width: 300px;
+    width: 320px;
+   
 }
+
 
 .table tr td {
     vertical-align: middle;

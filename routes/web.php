@@ -19,6 +19,15 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 route::get('/dashboard','DashboardController@show')->middleware('verified')->middleware('auth');
+route::get('/admin','DashboardController@show')->middleware('verified')->middleware('auth');
+
+
+
+Route::middleware('auth')->group(function(){
+    /////
+    route::get('admin/user/list','AdminUserController@list');
+
+});
