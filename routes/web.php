@@ -29,5 +29,17 @@ route::get('/admin','DashboardController@show')->middleware('verified')->middlew
 Route::middleware('auth')->group(function(){
     /////
     route::get('admin/user/list','AdminUserController@list');
+    route::get('admin/user/add','AdminUserController@add');
+
+    route::post('admin/user/store', 'AdminUserController@store');
+
+    route::get('admin/user/delete/{id}', 'AdminUserController@delete')->name('delete_user');
+
+    route::get('admin/user/action','AdminUserController@action');
+
+    route::get('admin/user/edit/{id}', 'AdminUserController@edit')->name('user_edit');
+
+    route::post('admin/user/update/{id}', 'AdminUserController@update')->name('user_update');
+
 
 });
